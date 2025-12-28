@@ -29,6 +29,7 @@ final_value = scaler.transform([all_value])
 
 
 model = st.cache(RandomForestRegressor)()
+st.cache(model.fit(X,y))
 model.fit(X,y)
 house_price = model.predict(final_value)[0]
 
@@ -39,6 +40,7 @@ st.success(msg)
 
 
 st.markdown('''**Design and developed by:aradhana**''')
+
 
 
 
